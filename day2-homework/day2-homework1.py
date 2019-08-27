@@ -16,11 +16,13 @@ import sys
 f=open(sys.argv[1])
 
 for i, line in enumerate(f):
-    if "DROME" and "FBgn" not in line: #if there are no Drome and FBgn in the line, it will pass those.
+    if "DROME" and "FBgn" not in line: 
         continue
-    columns = line.split()    #split the line based on whitespace
-    flybase=columns[-1].     #grab the last column as flybase
-    uniport_name =columns[-2] #grab the last second column as uniport name
+    columns = line.split()    
+    #last column -1 is the FBgn code
+    flybase=columns[-1]     
+    uniport_name =columns[-2] 
     
-    print (flybase,"\t", uniport_name). # \t sep those two with tab 
+    #sep="" can adjust how you want to sep the things (space, whitespace, or tab)
+    print (flybase, uniport_name, sep = "\t")
         
