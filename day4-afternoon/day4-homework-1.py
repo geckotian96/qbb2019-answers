@@ -32,6 +32,7 @@ for i, line in enumerate (open(metadata)):
     srr_id=fields[0]
     sex=fields[1]
     stage=fields[2]
+    sex_stage=str(sex)+"_"+str(stage)
 #
     ctab_path = os.path.join(ctab_dir, srr_id, "t_data.ctab")
 #
@@ -39,7 +40,7 @@ for i, line in enumerate (open(metadata)):
 #
     df = pd.read_csv(ctab_path, sep="\t", index_col="t_name")
     fpkms["gene_name"] =df.loc[:,"gene_name"]
-    fpkms[((sex, stage))]=df.loc[:,"FPKM"]
+    fpkms[((sex_stage))]=df.loc[:,"FPKM"]
 
 
 df_fpkm = pd.DataFrame(fpkms)
