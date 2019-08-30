@@ -26,10 +26,16 @@ for index, row in new_df.iterrows():
     if row.loc["strand"] == True:
         row.loc["start"]=int(row.loc["start"])-500
         row.loc["end"]=int(row.loc["end"])+500
+        if row.loc["strand"] < 1:
+            row.loc["strand"] = 1
+            print ("NA")
         print (row.loc["chr"], row.loc["start"], row.loc["end"], row.loc["t_name"], sep="\t" )
     else:
         row.loc["start"]=int(row.loc["start"])+500
         row.loc["end"]=int(row.loc["end"])-500
+        if row.loc["end"] < 1:
+            row.loc["end"] = 1
+            print ("NA")
         print (row.loc["chr"], row.loc["start"], row.loc["end"], row.loc["t_name"], sep="\t" )
 
 # print (new_df)
