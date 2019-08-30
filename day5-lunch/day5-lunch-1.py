@@ -11,7 +11,7 @@ from sklearn.decomposition import PCA
 ctab_file = sys.argv[1]
 
 
-df=pd.read_csv(ctab_file, sep="\t", index_col="t_name")
+df=pd.read_csv(ctab_file, sep="\t")
 
 clean_df=df.loc[:,["chr","start","end","t_name"]]
 
@@ -24,12 +24,16 @@ new_df=clean_df.join(col_strand)
 
 for index, row in new_df.iterrows():
     if row.loc["strand"] == True:
-        row.loc["start"]=row.loc["start"]-500
-        row.loc["end"]=row.loc["end"]+500
+        row.loc["start"]=int(row.loc["start"])-500
+        row.loc["end"]=int(row.loc["end"])+500
+        print (row.loc["chr"], row.loc["start"], row.loc["end"], row.loc["t_name"], sep="\t" )
     else:
-        row.loc["start"]=row.loc["start"]+500
-        row.loc["end"]=row.loc["end"]-500
+        row.loc["start"]=int(row.loc["start"])+500
+        row.loc["end"]=int(row.loc["end"])-500
+        print (row.loc["chr"], row.loc["start"], row.loc["end"], row.loc["t_name"], sep="\t" )
 
-print (new_df)
+# print (new_df)
+
+
 
 
