@@ -3,9 +3,12 @@
 """
 usage:./py <t_name> <samples_csv> <FPKMS>
 
-create a timecourse of a given transcrip for females
-./day4-homework-3.py FBtr0331261 ~/qbb2019/data/samples.csv
-/Users/cmdb/qbb2019/data/repl
+create a timecourse of the given transcrips of females and males
+
+
+Usage: ./day4-homework.3.2.py <t_name> <samples.csv> <replicates.csv> <c_tab dir>
+
+
 """
 #./day4-homework-3.2.py  FBtr0331261 ~/qbb2019/data/samples.csv ~/qbb2019/data/replicates.csv ~/qbb2019-answers/results/stringtie/
 
@@ -43,26 +46,34 @@ m_vals2= sex_ident("male", replicates)
 
 
 fig, ax= plt.subplots()
+
 ax.plot(f_vals1, color="red", label="female")
 ax.plot(m_vals1, color="blue", label="male")
-ax.plot(range(4,8),m_vals2, ".",color="orange", label="m. replicates")
-ax.plot(range(4,8),f_vals2, ".",color="green", label="f. replicates")
-ax.legend(loc="lower right", bbox_to_anchor=(1.0, 0.5))
+ax.plot(m_vals2, ".",color="orange", label="m. replicates")
+ax.plot(f_vals2, ".",color="green", label="f. replicates")
 
-fig.suptitle("FBtr0331261 Expression")
-ax.set_xlabel("Developmental Stage")
-ax.set_ylabel("mRNA Expression Level (FPKMs)")
-ax.set_xticklabels(["0","10", "11", "12", "13", "14A", "14B", "14C", "14D"])
 
+# fig.suptitle("FBtr0331261 Expression")
+# ax.set_xlabel("Developmental Stage")
+# ax.set_ylabel("mRNA Expression Level (FPKMs)")
+# ax.set_xticklabels(["0","10", "11", "12", "13", "14A", "14B", "14C", "14D"])
+#
+# plt.tight_layout()
+# plt.subplots_adjust(top=0.9)
+# fig.savefig("timecoursefvs.png")
+#
+# plt.close(fig)
+
+
+ax.legend(loc='center right', bbox_to_anchor=(1.5, .5))
+ax.set_xticklabels(["0", "10", "11", "12", "13", "14A", "14B", "14C", "14D"])
+ax.set_ylabel("mRNA Abundance (FPKM)")
+ax.set_xlabel("Development Stage")
+ax.set_title("FBtr0331261 Abundance")
 plt.tight_layout()
 plt.subplots_adjust(top=0.9)
-fig.savefig("timecoursefvs.png")
+fig.savefig("q3.timecourse.png")
 plt.close(fig)
-
-
-
-
-
 
 
 
