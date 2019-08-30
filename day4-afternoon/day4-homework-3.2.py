@@ -53,18 +53,6 @@ ax.plot(m_vals2, ".",color="orange", label="m. replicates")
 ax.plot(f_vals2, ".",color="green", label="f. replicates")
 
 
-# fig.suptitle("FBtr0331261 Expression")
-# ax.set_xlabel("Developmental Stage")
-# ax.set_ylabel("mRNA Expression Level (FPKMs)")
-# ax.set_xticklabels(["0","10", "11", "12", "13", "14A", "14B", "14C", "14D"])
-#
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.9)
-# fig.savefig("timecoursefvs.png")
-#
-# plt.close(fig)
-
-
 ax.legend(loc='center right', bbox_to_anchor=(1.5, .5))
 ax.set_xticklabels(["0", "10", "11", "12", "13", "14A", "14B", "14C", "14D"])
 ax.set_ylabel("mRNA Abundance (FPKM)")
