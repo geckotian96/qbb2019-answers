@@ -25,20 +25,19 @@ new_df=clean_df.join(col_strand)
 for index, row in new_df.iterrows():
     if row.loc["strand"] == True:
         row.loc["start"]=int(row.loc["start"])-500
-        row.loc["end"]=int(row.loc["end"])+500
-        if row.loc["strand"] < 1:
-            row.loc["strand"] = 1
-            print ("NA")
+        row.loc["end"]=int(row.loc["start"])+1000
+        if row.loc["start"] < 0:
+            row.loc["start"] = 1
         print (row.loc["chr"], row.loc["start"], row.loc["end"], row.loc["t_name"], sep="\t" )
     else:
         row.loc["start"]=int(row.loc["start"])+500
-        row.loc["end"]=int(row.loc["end"])-500
-        if row.loc["end"] < 1:
+        row.loc["end"]=int(row.loc["start"])-1000
+        
+        if row.loc["end"] < 0:
             row.loc["end"] = 1
-            print ("NA")
         print (row.loc["chr"], row.loc["start"], row.loc["end"], row.loc["t_name"], sep="\t" )
 
-# print (new_df)
+
 
 
 
