@@ -1,0 +1,25 @@
+25 25 25 25
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               FPKM_Sxl   R-squared:                      -0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                      -inf
+Date:                Sat, 31 Aug 2019   Prob (F-statistic):                nan
+Time:                        10:57:49   Log-Likelihood:                -35.833
+No. Observations:                  25   AIC:                             73.67
+Df Residuals:                      24   BIC:                             74.89
+Df Model:                           0                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.5126      0.207      2.475      0.021       0.085       0.940
+==============================================================================
+Omnibus:                       23.053   Durbin-Watson:                   2.115
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               31.431
+Skew:                           2.085   Prob(JB):                     1.50e-07
+Kurtosis:                       6.575   Cond. No.                         1.00
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
