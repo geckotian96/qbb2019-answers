@@ -21,9 +21,9 @@ for ident, sequence in reader1:
     for i in range(0, len(sequence) -k + 1 ):
         target_kmer = sequence[i:i+k]
         if target_kmer in target_kmers:
-            target_kmers[target_kmer].append((i, ident))
+            target_kmers[target_kmer].append((ident,i))
         else:
-            target_kmers[target_kmer]=[(i, ident)]
+            target_kmers[target_kmer]=[(ident, i)]
         
 
 query_kmers = []
