@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-
+"""
+Make a dotplot 
+Usage: ./name.py outputfile.out
+"""
 
 import sys
 import matplotlib.pyplot as plt
@@ -20,7 +23,7 @@ for i, line in enumerate(open(sys.argv[1])):
 
 
 fig, ax =plt.subplots()
-fig.suptitle("Dotplot")
+fig.suptitle("Dotplot 2")
 
 ax.scatter(x=list_x,y=list_y, alpha=0.2)
 ax.set_xlabel("total length of contigs")
