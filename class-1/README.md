@@ -29,7 +29,31 @@ lastz reference.fasta contigs.fasta --chain --format=general > spades.out
  
  
 ###Part 2: MAP006
- NA
+ I dont know how to use Spades to assemble it. Here is my log: 
+ 
+ === Error correction and assembling warnings:
+  * 0:00:09.410    80M / 3G    WARN    General                 (kmer_coverage_model.cpp   : 327)   Valley value was estimated improperly, reset to 2
+  * 0:00:09.410    80M / 3G    WARN    General                 (kmer_coverage_model.cpp   : 366)   Failed to determine erroneous kmer threshold. Threshold set to: 2
+  * 0:00:15.492    16M / 3G    WARN    General                 (simplification.cpp        : 479)   The determined erroneous connection coverage threshold may be determined improperly
+  * 0:00:07.562    28M / 3G    WARN    General                 (kmer_coverage_model.cpp   : 327)   Valley value was estimated improperly, reset to 3
+  * 0:00:07.562    28M / 3G    WARN    General                 (kmer_coverage_model.cpp   : 366)   Failed to determine erroneous kmer threshold. Threshold set to: 3
+  * 0:00:08.469    16M / 3G    WARN    General                 (kmer_coverage_model.cpp   : 366)   Failed to determine erroneous kmer threshold. Threshold set to: 8
+ ======= Warnings saved to /Users/cmdb/qbb2019-answers/class-1/MAP006_1/warnings.log
+ 
+ 
+ but, if I do the velvet:
+ 
+ time velveth MAP006_contig 15 -fasta -shortPaired MAP006.subset.fa 
+
+ real	0m1.887s
+ user	0m5.730s
+ sys	0m0.611s
+ 
+ time velvetg MAP006_contig
+ real	0m16.156s
+ user	0m21.109s
+ sys	0m0.539s
+ 
  
  
  
