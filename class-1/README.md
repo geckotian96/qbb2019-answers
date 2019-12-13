@@ -71,7 +71,6 @@ lastz reference.fasta contigs.fasta --chain --format=general > spades.out
  
 lastz reference.fasta contigs.fa --chain --format=general > vh_better_coverage.out  
  
-
 time spades.py --only-assembler -s reads_1.fastq -s reads_2.fastq -o spades_class_1_better_coverage
 
 real	0m41.769s
