@@ -1,0 +1,40 @@
+fastq-dump -X 1000000 --split-files SRR1035454
+
+bismark_genome_preparation --bowtie2 ch19
+
+bismark --bowtie2 --genome /Users/cmdb/qbb2019-answers/week-12/ch19 -1 SRR1035454_1.fastq -2 SRR1035454_2.fastq
+
+samtools sort SRR1035454_1_bismark_bt2_pe.bam -o SRR1035454output.bam
+
+bismark_methylation_extractor --bedGraph --comprehensive  SRR1035454_1_bismark_bt2_pe.bam
+
+gunzip -k SRR1035454_1_bismark_bt2_pe.bedGraph.gz
+
+
+bedtools intersect -v -a SRR1035454_1_bismark_bt2_pe.bedGraph -b SRR1035452_1_bismark_bt2_pe.bedGraph > specific_methlation_in_454
+
+bedtools intersect -v -a SRR1035452_1_bismark_bt2_pe.bedGraph -b SRR1035454_1_bismark_bt2_pe.bedGraph > specific_methlation_in_452
+
+grep "100" specific_methlation_in_452 > specific_methlation_in_452_post
+
+
+grep "100" specific_methlation_in_454 > specific_methlation_in_454_post
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+bismark_methylation_extractor --gzip --bedGraph SRR1035454_1_bismark_bt2_pe.bam
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+samtools view -h -o SRR1035454_1_bismark_bt2_pe.sam SRR1035454_1_bismark_bt2_pe.bam
+
+bismark_methylation_extractor -s --comprehensive --bedgraph SRR1035454_1_bismark_bt2_pe.sam
+
+igv 
+
+
+SRR1035452
+
+bismark --bowtie2 ../week-12/ -1 SRR1035452_1.fastq -2 SRR1035452_2.fastq
