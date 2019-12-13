@@ -1,0 +1,50 @@
+Wed Sep 18 21:19:24 2019
+ velveth MAP006_contig 15 -fasta -shortPaired MAP006.subset.fa
+Version 1.2.10
+Copyright 2007, 2008 Daniel Zerbino (zerbino@ebi.ac.uk)
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Compilation settings:
+CATEGORIES = 4
+MAXKMERLENGTH = 191
+OPENMP
+LONGSEQUENCES
+
+Wed Sep 18 21:21:24 2019
+ velvetg MAP006_contig
+Version 1.2.10
+Copyright 2007, 2008 Daniel Zerbino (zerbino@ebi.ac.uk)
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Compilation settings:
+CATEGORIES = 4
+MAXKMERLENGTH = 191
+OPENMP
+LONGSEQUENCES
+
+Final graph has 241651 nodes and n50 of 29, max 855, total 2762520, using 0/806 reads
+Wed Sep 18 21:24:23 2019
+ velveth MAP006_contig 15 -fasta -shortPaired MAP006.subset.fa
+Version 1.2.10
+Copyright 2007, 2008 Daniel Zerbino (zerbino@ebi.ac.uk)
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Compilation settings:
+CATEGORIES = 4
+MAXKMERLENGTH = 191
+OPENMP
+LONGSEQUENCES
+
+Wed Sep 18 21:25:02 2019
+ velvetg MAP006_contig
+Version 1.2.10
+Copyright 2007, 2008 Daniel Zerbino (zerbino@ebi.ac.uk)
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Compilation settings:
+CATEGORIES = 4
+MAXKMERLENGTH = 191
+OPENMP
+LONGSEQUENCES
+
+Final graph has 241618 nodes and n50 of 29, max 855, total 2762430, using 0/806 reads
